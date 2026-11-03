@@ -1,0 +1,217 @@
+{
+  "model": "gemini-3.1-flash-lite",
+  "temperature": 0,
+  "max_tokens": 256,
+  "labels": [
+    "Exemplary-Gold-Standard",
+    "Standard-Compliant",
+    "Marginal-Quality-At-Risk",
+    "Non-Compliant-Intervention-Required"
+  ],
+  "system_prompt": "Kamu adalah auditor program Makan Bergizi Gratis (MBG) Badan Gizi Nasional.\nTentukan tingkat kepatuhan satu paket distribusi makanan berdasarkan data dapur, gizi, logistik pengiriman, suhu makanan saat tiba, dan sisa makanan.\nLabel (dari terbaik ke terburuk):\n- Exemplary-Gold-Standard: sangat baik di semua aspek, menjadi contoh praktik terbaik\n- Standard-Compliant: memenuhi standar program\n- Marginal-Quality-At-Risk: masih berjalan tetapi kualitas mulai berisiko\n- Non-Compliant-Intervention-Required: tidak memenuhi standar, perlu intervensi\nJawab HANYA dengan salah satu label di atas, persis seperti tulisannya.\n\nNilai tengah (median) tiap label dari data historis:\n- Exemplary-Gold-Standard: transit 16 menit, suhu tiba 67.3°C, sisa makanan 7.4%, jarak 4.1 km, protein 24.4 g, kehadiran 94.0%\n- Standard-Compliant: transit 15 menit, suhu tiba 66.5°C, sisa makanan 13.0%, jarak 4.2 km, protein 22.6 g, kehadiran 94.9%\n- Marginal-Quality-At-Risk: transit 26 menit, suhu tiba 61.5°C, sisa makanan 20.1%, jarak 7.0 km, protein 22.8 g, kehadiran 94.2%\n- Non-Compliant-Intervention-Required: transit 72 menit, suhu tiba 38.0°C, sisa makanan 19.0%, jarak 17.6 km, protein 23.1 g, kehadiran 92.9%\nSebaran data historis: {'Standard-Compliant': 0.65, 'Marginal-Quality-At-Risk': 0.18, 'Exemplary-Gold-Standard': 0.11, 'Non-Compliant-Intervention-Required': 0.06}\nCatatan: suhu tiba rendah dan waktu transit lama adalah tanda kuat ketidakpatuhan.",
+  "few_shot": [
+    {
+      "data": {
+        "regional_cluster": "Luar Jawa Urban",
+        "beneficiary_category": "Santri Pondok Pesantren",
+        "kitchen_daily_capacity_portions": 1999,
+        "raw_ingredient_cost_per_portion_idr": 11600,
+        "protein_type": "Daging Ayam Broiler",
+        "estimated_calories_kcal": 802.0,
+        "estimated_protein_grams": 27.9,
+        "delivery_distance_km": 6.9,
+        "delivery_transport_mode": "Motor Listrik / Roda Tiga Box",
+        "transit_time_minutes": 16,
+        "food_arrival_temperature_celsius": 67.2,
+        "plate_waste_percentage": 5.7,
+        "student_attendance_rate_pct": 97.5,
+        "local_farmer_sourcing_pct": 78.7
+      },
+      "label": "Exemplary-Gold-Standard"
+    },
+    {
+      "data": {
+        "regional_cluster": "Daerah Pedesaan & Kepulauan",
+        "beneficiary_category": "Santri Pondok Pesantren",
+        "kitchen_daily_capacity_portions": 1541,
+        "raw_ingredient_cost_per_portion_idr": 12000,
+        "protein_type": "Daging Ayam Broiler",
+        "estimated_calories_kcal": 810.0,
+        "estimated_protein_grams": 28.1,
+        "delivery_distance_km": 1.9,
+        "delivery_transport_mode": "Perahu Ketinting Sungai / Laut",
+        "transit_time_minutes": 16,
+        "food_arrival_temperature_celsius": 65.0,
+        "plate_waste_percentage": 6.2,
+        "student_attendance_rate_pct": 92.7,
+        "local_farmer_sourcing_pct": 86.5
+      },
+      "label": "Exemplary-Gold-Standard"
+    },
+    {
+      "data": {
+        "regional_cluster": "Wilayah 3T Perbatasan & Pedalaman",
+        "beneficiary_category": "Siswa SD / Madrasah Ibtidaiyah",
+        "kitchen_daily_capacity_portions": 500,
+        "raw_ingredient_cost_per_portion_idr": 12600,
+        "protein_type": "Daging Ayam Broiler",
+        "estimated_calories_kcal": 622.0,
+        "estimated_protein_grams": 23.5,
+        "delivery_distance_km": 13.0,
+        "delivery_transport_mode": "Jalan Kaki / Gerobak",
+        "transit_time_minutes": 52,
+        "food_arrival_temperature_celsius": 49.6,
+        "plate_waste_percentage": 17.5,
+        "student_attendance_rate_pct": 90.7,
+        "local_farmer_sourcing_pct": 86.6
+      },
+      "label": "Marginal-Quality-At-Risk"
+    },
+    {
+      "data": {
+        "regional_cluster": "Daerah Pedesaan & Kepulauan",
+        "beneficiary_category": "Siswa SD / Madrasah Ibtidaiyah",
+        "kitchen_daily_capacity_portions": 1958,
+        "raw_ingredient_cost_per_portion_idr": 10600,
+        "protein_type": "Telur Ayam Boiler",
+        "estimated_calories_kcal": 562.0,
+        "estimated_protein_grams": 15.8,
+        "delivery_distance_km": 3.1,
+        "delivery_transport_mode": "Mobil Pickup Termal",
+        "transit_time_minutes": 7,
+        "food_arrival_temperature_celsius": 68.0,
+        "plate_waste_percentage": 22.1,
+        "student_attendance_rate_pct": 95.3,
+        "local_farmer_sourcing_pct": 71.3
+      },
+      "label": "Marginal-Quality-At-Risk"
+    },
+    {
+      "data": {
+        "regional_cluster": "Wilayah 3T Perbatasan & Pedalaman",
+        "beneficiary_category": "Siswa SMP / MTs",
+        "kitchen_daily_capacity_portions": 500,
+        "raw_ingredient_cost_per_portion_idr": 12800,
+        "protein_type": "Ikan Kembung / Lele / Bandeng",
+        "estimated_calories_kcal": 756.0,
+        "estimated_protein_grams": 25.6,
+        "delivery_distance_km": 14.7,
+        "delivery_transport_mode": "Perahu Ketinting Sungai / Laut",
+        "transit_time_minutes": 78,
+        "food_arrival_temperature_celsius": 35.2,
+        "plate_waste_percentage": 23.2,
+        "student_attendance_rate_pct": 90.5,
+        "local_farmer_sourcing_pct": 91.6
+      },
+      "label": "Non-Compliant-Intervention-Required"
+    },
+    {
+      "data": {
+        "regional_cluster": "Wilayah 3T Perbatasan & Pedalaman",
+        "beneficiary_category": "Siswa SMP / MTs",
+        "kitchen_daily_capacity_portions": 769,
+        "raw_ingredient_cost_per_portion_idr": 13500,
+        "protein_type": "Susu Pasteurisasi Segar",
+        "estimated_calories_kcal": 775.0,
+        "estimated_protein_grams": 20.0,
+        "delivery_distance_km": 22.2,
+        "delivery_transport_mode": "Perahu Ketinting Sungai / Laut",
+        "transit_time_minutes": 111,
+        "food_arrival_temperature_celsius": 30.0,
+        "plate_waste_percentage": 22.2,
+        "student_attendance_rate_pct": 96.3,
+        "local_farmer_sourcing_pct": 76.8
+      },
+      "label": "Non-Compliant-Intervention-Required"
+    },
+    {
+      "data": {
+        "regional_cluster": "Daerah Pedesaan & Kepulauan",
+        "beneficiary_category": "Balita & Ibu Hamil Posyandu",
+        "kitchen_daily_capacity_portions": 1109,
+        "raw_ingredient_cost_per_portion_idr": 11400,
+        "protein_type": "Ikan Kembung / Lele / Bandeng",
+        "estimated_calories_kcal": 578.0,
+        "estimated_protein_grams": 22.2,
+        "delivery_distance_km": 4.1,
+        "delivery_transport_mode": "Mobil Pickup Termal",
+        "transit_time_minutes": 13,
+        "food_arrival_temperature_celsius": 67.6,
+        "plate_waste_percentage": 11.9,
+        "student_attendance_rate_pct": 89.6,
+        "local_farmer_sourcing_pct": 78.7
+      },
+      "label": "Standard-Compliant"
+    },
+    {
+      "data": {
+        "regional_cluster": "Daerah Pedesaan & Kepulauan",
+        "beneficiary_category": "Santri Pondok Pesantren",
+        "kitchen_daily_capacity_portions": 1506,
+        "raw_ingredient_cost_per_portion_idr": 12400,
+        "protein_type": "Daging Ayam Broiler",
+        "estimated_calories_kcal": 818.0,
+        "estimated_protein_grams": 28.3,
+        "delivery_distance_km": 5.0,
+        "delivery_transport_mode": "Perahu Ketinting Sungai / Laut",
+        "transit_time_minutes": 19,
+        "food_arrival_temperature_celsius": 63.3,
+        "plate_waste_percentage": 11.4,
+        "student_attendance_rate_pct": 91.1,
+        "local_farmer_sourcing_pct": 91.5
+      },
+      "label": "Standard-Compliant"
+    }
+  ],
+  "provider": "gemini",
+  "lolos": true,
+  "evaluasi": {
+    "accuracy": 0.725,
+    "f1_macro": 0.7225,
+    "f1_per_kelas": {
+      "Exemplary-Gold-Standard": 0.6588,
+      "Standard-Compliant": 0.6019,
+      "Marginal-Quality-At-Risk": 0.6972,
+      "Non-Compliant-Intervention-Required": 0.932
+    },
+    "invalid": 0,
+    "n": 200,
+    "latensi_rata2_detik": 7.112,
+    "confusion_matrix": {
+      "labels": [
+        "Exemplary-Gold-Standard",
+        "Standard-Compliant",
+        "Marginal-Quality-At-Risk",
+        "Non-Compliant-Intervention-Required"
+      ],
+      "matrix": [
+        [
+          28,
+          16,
+          6,
+          0
+        ],
+        [
+          5,
+          31,
+          13,
+          1
+        ],
+        [
+          2,
+          6,
+          38,
+          4
+        ],
+        [
+          0,
+          0,
+          2,
+          48
+        ]
+      ]
+    },
+    "f1_library_pembanding": 1.0,
+    "tanggal": "2026-11-04"
+  }
+}

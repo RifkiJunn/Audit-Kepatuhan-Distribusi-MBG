@@ -1,0 +1,11 @@
+kitchen_daily_capacity_portions,raw_ingredient_cost_per_portion_idr,delivery_distance_km,transit_time_minutes,food_arrival_temperature_celsius,plate_waste_percentage,student_attendance_rate_pct,local_farmer_sourcing_pct,estimated_calories_kcal,estimated_protein_grams,regional_cluster,beneficiary_category,protein_type,delivery_transport_mode
+1136,11400,9.0,29,67.2,9.5,95.7,94.1,728.0,24.7,Daerah Pedesaan & Kepulauan,Siswa SMP / MTs,Ikan Kembung / Lele / Bandeng,Mobil Pickup Termal
+1418,11800,5.3,15,65.7,21.9,95.5,87.2,606.0,23.0,Daerah Pedesaan & Kepulauan,Siswa SD / Madrasah Ibtidaiyah,Daging Ayam Broiler,Mobil Pickup Termal
+952,11800,2.2,15,68.0,22.0,91.6,77.4,596.0,21.5,Wilayah 3T Perbatasan & Pedalaman,Siswa SD / Madrasah Ibtidaiyah,Ikan Kembung / Lele / Bandeng,Mobil Pickup Termal
+1176,11900,7.8,19,70.5,15.0,92.8,86.6,608.0,23.0,Daerah Pedesaan & Kepulauan,Siswa SD / Madrasah Ibtidaiyah,Daging Ayam Broiler,Mobil Pickup Termal
+1086,12100,6.6,20,67.3,8.2,96.5,87.2,612.0,23.2,Daerah Pedesaan & Kepulauan,Siswa SD / Madrasah Ibtidaiyah,Daging Ayam Broiler,Mobil Pickup Termal
+1452,13100,16.6,53,44.5,17.6,90.1,69.5,617.0,17.3,Daerah Pedesaan & Kepulauan,Balita & Ibu Hamil Posyandu,Susu Pasteurisasi Segar,Jalan Kaki / Gerobak
+867,12800,5.2,28,66.6,8.0,93.8,94.0,766.0,27.1,Wilayah 3T Perbatasan & Pedalaman,Siswa SMP / MTs,Daging Ayam Broiler,Perahu Ketinting Sungai / Laut
+1846,10300,12.8,57,44.5,14.7,94.1,65.6,696.0,19.1,Daerah Pedesaan & Kepulauan,Siswa SMP / MTs,Telur Ayam Boiler,Perahu Ketinting Sungai / Laut
+952,9900,1.7,12,62.0,18.0,91.3,92.8,688.0,18.8,Daerah Pedesaan & Kepulauan,Siswa SMP / MTs,Telur Ayam Boiler,Motor Listrik / Roda Tiga Box
+1027,12300,3.8,15,66.2,14.7,92.8,69.2,756.0,26.8,Daerah Pedesaan & Kepulauan,Siswa SMP / MTs,Daging Ayam Broiler,Motor Listrik / Roda Tiga Box

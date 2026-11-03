@@ -1,0 +1,212 @@
+{
+  "nama_model": "Random Forest",
+  "cv_f1_macro": {
+    "Random Forest": 0.9952,
+    "DNN (MLP 64-32)": 0.9588
+  },
+  "fitur_numerik": [
+    "kitchen_daily_capacity_portions",
+    "raw_ingredient_cost_per_portion_idr",
+    "delivery_distance_km",
+    "transit_time_minutes",
+    "food_arrival_temperature_celsius",
+    "plate_waste_percentage",
+    "student_attendance_rate_pct",
+    "local_farmer_sourcing_pct",
+    "estimated_calories_kcal",
+    "estimated_protein_grams"
+  ],
+  "fitur_kategori": [
+    "regional_cluster",
+    "beneficiary_category",
+    "protein_type",
+    "delivery_transport_mode"
+  ],
+  "kelas": [
+    "Exemplary-Gold-Standard",
+    "Standard-Compliant",
+    "Marginal-Quality-At-Risk",
+    "Non-Compliant-Intervention-Required"
+  ],
+  "rentang_fitur": {
+    "kitchen_daily_capacity_portions": [
+      500.0,
+      3600.0,
+      1672.0
+    ],
+    "raw_ingredient_cost_per_portion_idr": [
+      8500.0,
+      14500.0,
+      11300.0
+    ],
+    "delivery_distance_km": [
+      0.5,
+      35.0,
+      4.9
+    ],
+    "transit_time_minutes": [
+      5.0,
+      120.0,
+      18.0
+    ],
+    "food_arrival_temperature_celsius": [
+      30.0,
+      72.0,
+      65.7
+    ],
+    "plate_waste_percentage": [
+      1.0,
+      37.7,
+      13.2
+    ],
+    "student_attendance_rate_pct": [
+      82.1,
+      100.0,
+      94.6
+    ],
+    "local_farmer_sourcing_pct": [
+      35.0,
+      100.0,
+      75.7
+    ],
+    "estimated_calories_kcal": [
+      510.0,
+      850.0,
+      675.0
+    ],
+    "estimated_protein_grams": [
+      15.0,
+      34.1,
+      22.7
+    ]
+  },
+  "pilihan_kategori": {
+    "regional_cluster": [
+      "Daerah Pedesaan & Kepulauan",
+      "Jawa Metropolitan",
+      "Luar Jawa Urban",
+      "Wilayah 3T Perbatasan & Pedalaman"
+    ],
+    "beneficiary_category": [
+      "Balita & Ibu Hamil Posyandu",
+      "Santri Pondok Pesantren",
+      "Siswa SD / Madrasah Ibtidaiyah",
+      "Siswa SMA / SMK / MA",
+      "Siswa SMP / MTs"
+    ],
+    "protein_type": [
+      "Daging Ayam Broiler",
+      "Daging Sapi / Kerbau",
+      "Ikan Kembung / Lele / Bandeng",
+      "Susu Pasteurisasi Segar",
+      "Telur Ayam Boiler"
+    ],
+    "delivery_transport_mode": [
+      "Jalan Kaki / Gerobak",
+      "Mobil Pickup Termal",
+      "Mobil Van Tertutup",
+      "Motor Listrik / Roda Tiga Box",
+      "Perahu Ketinting Sungai / Laut"
+    ]
+  },
+  "metrik_test": {
+    "accuracy": 0.9954,
+    "f1_macro": 0.9926,
+    "f1_per_kelas": {
+      "Exemplary-Gold-Standard": 0.9966,
+      "Standard-Compliant": 0.9976,
+      "Marginal-Quality-At-Risk": 0.9894,
+      "Non-Compliant-Intervention-Required": 0.9869
+    },
+    "n": 2600,
+    "waktu_prediksi_detik": 0.0794,
+    "confusion_matrix": {
+      "labels": [
+        "Exemplary-Gold-Standard",
+        "Standard-Compliant",
+        "Marginal-Quality-At-Risk",
+        "Non-Compliant-Intervention-Required"
+      ],
+      "matrix": [
+        [
+          293,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1676,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          468,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          151
+        ]
+      ]
+    }
+  },
+  "metrik_test_llm": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "f1_per_kelas": {
+      "Exemplary-Gold-Standard": 1.0,
+      "Standard-Compliant": 1.0,
+      "Marginal-Quality-At-Risk": 1.0,
+      "Non-Compliant-Intervention-Required": 1.0
+    },
+    "n": 200,
+    "waktu_prediksi_detik": 0.0653,
+    "confusion_matrix": {
+      "labels": [
+        "Exemplary-Gold-Standard",
+        "Standard-Compliant",
+        "Marginal-Quality-At-Risk",
+        "Non-Compliant-Intervention-Required"
+      ],
+      "matrix": [
+        [
+          50,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          50,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          50,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          50
+        ]
+      ]
+    }
+  },
+  "f1_baseline": 0.1965,
+  "waktu_training_detik": 0.69,
+  "versi": {
+    "scikit-learn": "1.9.1",
+    "pandas": "2.2.3",
+    "numpy": "2.5.4",
+    "joblib": "1.6.0"
+  }
+}
